@@ -15,10 +15,15 @@ def appendindic(pkt):
         dictio[macad] = DAKgen(macad).generate()
         print "\t Found CCo: %s (DAK: %s)" % (macad, dictio[macad]) 
 
+if sys.platform == 'darwin':
+    "default"="en0"
+    else
+    "default"="eth0"
+
 if __name__ == "__main__":
     usage = "usage: %prog [options] arg"
     parser = OptionParser(usage)
-    parser.add_option("-i", "--iface", dest="iface", default="eth0",
+    parser.add_option("-i", "--iface", dest="iface", default="default",
         help="select an interface to Enable sniff mode and sniff indicates packets", metavar="INTERFACE")
     parser.add_option("-s", "--source", dest="sourcemac", default="00:c4:ff:ee:00:00",
         help="source MAC address to use", metavar="SOURCEMARC")
