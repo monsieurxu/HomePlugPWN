@@ -15,7 +15,7 @@ from optparse import OptionParser
 if __name__ == "__main__":
     usage = "usage: %prog [options] arg"
     parser = OptionParser(usage)
-    parser.add_option("-i", "--iface", dest="iface", default="eth0",
+    parser.add_option("-i", "--iface", dest="iface", default="en0",
         help="select an interface to Enable sniff mode and sniff indicates packets", metavar="INTERFACE")
     parser.add_option("-t", "--targets", dest="macaddress", default="",
         help="Targets MAC address bytes", metavar="MACBYTES")
